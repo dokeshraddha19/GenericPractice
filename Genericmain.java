@@ -3,16 +3,9 @@ import java.util.Arrays;
 public class Genericmain {
 	//main method
 	public static void main(String[] args) {   
-		Integer[] arr = {34,21,32};
+		Integer[] arr = {21,34,32};
 		printArray(arr);
 		findmaximum(arr);
-		for(int i=0; i < arr.length; i++){  
-			 System.out.print(arr[i]+" ");    
-	        }  
-		//System.out.println("Array After Bubble Sort");  
-        //for(int i=0; i < arr.length; i++){  
-		 //System.out.print(arr[i] + " ");    
-        //}  
 		
 	}
 	//generic method
@@ -39,7 +32,25 @@ public class Genericmain {
 			
 		}
 		 
-		
+		for(int i=0; i < arr.length; i++){  
+			 System.out.print(arr[i]+" " ); 
+			}
+		System.out.println();
+			for(int i=arr.length-1;i>=0; i--){
+			  System.out.print(arr[i] + " ");
+			 	
+	        	} 
+			System.out.println();
+			for(int i=0; i < arr.length; i++){
+				for(int j=i+1;j<arr.length;j++){ 
+				 T temp=arr[arr.length-1];
+				 arr[arr.length-1]=arr[arr.length-2];
+				 arr[arr.length-2]=temp;
+				}
+			}
+			for(int i=0;i<arr.length;i++){
+				System.out.print(arr[i]+" ");
+			}   
 	}
 	
 	}
